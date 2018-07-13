@@ -11,7 +11,7 @@ John Schuster <John.schuster@PhoenixWorkgroup.com>
 :source-hightlighter: pygments
 :icons: font
 :docodir: ./doco
-:github: Github repository
+:github: https://github.com/GeekMustHave/ASCIIDoc-Ideas.git
 :linkattrs:
 :seclinks:
 :page-header: {image: ./images/GMH_WShadow.png}
