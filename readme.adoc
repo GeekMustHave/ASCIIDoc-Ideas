@@ -1,0 +1,47 @@
+= ASCIIDoc Ideas
+John Schuster <John.schuster@PhoenixWorkgroup.com>
+2.1b, 07/13/2018: Brainstormning
+:Author: John HR Schuster
+:Company: GeekMustHave
+:toc: left
+:toclevels: 4:
+:imagesdir: ./images
+:pagenums:
+:experimental:
+:source-hightlighter: pygments
+:icons: font
+:docodir: ./doco
+:github: Github repository
+:linkattrs:
+:seclinks:
+:page-header: {image: ./images/GMH_WShadow.png}
+
+This is just a sample document used to help form new ideas on how to use ASCIIDoc to do new exciting things.
+
+== Introduction
+
+Written by {Author} for {Company}.
+
+I have been using ASCIIDoctor for over 3 years and it is my mainstay for editing documentation and fessing our ideas.
+
+== Ideas
+ 
+[quote, Eleanor Roosevelt ]
+____
+Great minds discuss ideas; average minds discuss events; small minds discuss people.
+____
+
+=== VSCode ASCIIDoctor Snippet library
+
+Over the past couple of years I have had multiple snippet libraries for ASCIIDoctor.
+Recently I decided to make one central snippet library based on the documentation process I Use.
+
+A copy of the snippet library is at {docodir}/asciidoc.json link:{docodir}/asciidoc.json[ASCIIDoc VSCode Snippets, window='_blank']
+
+
+== References
+
+
+ 
+
+ 

@@ -1,0 +1,240 @@
+{
+/*
+	GeekMustHave - ASCIIDoctor Snippets for VSCode
+	License: Go ahead and use and abuse and share	
+
+ 	Place your snippets for AsciiDoc here. Each snippet is defined under a snippet name and has a prefix, body and 
+	description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	$1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	same ids are connected.
+	Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+/*  Snippets
+		zAdmonition 	- Caution, Notes, etc
+		zCode			- Insert code segment
+		zGlossary 		- Insert a glossary item		
+		zHeader			- Insert a full document header, default attributes
+		zHistory 		- Add Document history table
+		zImage			- Add image with footnote
+		zLink			- Add hyperlink
+		zNewLine		- Add a new line sequence (in-place)
+		zPageBreak      - Add a hard page break
+		zSidebar		- Add sidebar box with heading
+		zTable          - Add a 3 column table with footnote 
+*/
+
+/* --- zAdmonition - ASCDoc snippet GeekMustHave
+		Insert admonition block
+*/
+"insert Admonition": {
+	"prefix": "zAdmonition",
+	"body": [
+		"[${1|NOTE,TIP,WARNING,IMPORTANT,CAUTION|}]",
+		"====",
+		"${2:Admonition content}",
+		"====",
+		" ",
+		"$0",
+	],
+	"description": "Insert Sidebar"
+
+},
+
+/* --- zCode - ASCDoc snippet GeekMustHave
+		Insert a new glossary item
+*/
+"insert Code": {
+	"prefix": "zCode",
+	"body": [
+		".${1:Code Heading}",
+		"[source,${2|JavaScript,Powershell,Python|}]",
+		"----"		,
+		"${3:Insert code here}",
+		"----",
+		"", 
+		"$0",
+	],
+	"description": "Insert Code segment"
+
+},
+
+
+/* --- zGlossary - ASCDoc snippet GeekMustHave
+		Insert a new glossary item
+*/
+"insert Glossary": {
+	"prefix": "zGlossary",
+	"body": [
+		"[[${1:Abbrev}]]",
+		"${1:Abbrev}::",
+		"${2:Glossary Definition}",
+		" ",
+		"$0",
+	],
+	"description": "Add glossary"
+
+},	
+
+/* --- zHeader - ADOC snippet GeekMustHave
+		Insert a document header
+		Typically at very top of document	
+*/
+"insert Header": {
+	"prefix": "zHeader",
+	"body": [
+		"= ${1:Doco Title}",
+		"John Schuster <John.schuster@PhoenixWorkgrpup.com>",
+		"${3:Version}, ${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}: ${2:Doco Type}",
+		":Author: John HR Schuster",
+		":Company:${4:Who is owner}",
+		":toc: left",
+		":toclevels: 4:",
+		":imagesdir: ./images",
+		":pagenums:",
+		":experimental:",
+		":source-hightlighter: pygments",
+		":icons: font",
+		":docdir: */documents",
+		":github: ${5:Github repository}",
+		":linkattrs:",
+		":seclinks:",		
+		"",
+		"$0",
+	],
+	"description": "Add Document settings - Top of page header"
+},
+
+
+/* --- zDocoHistory - ADOC snippet GeekMustHave
+		Insert a document history table 
+		 typically at bottom of ADOC
+*/
+"insert History": {
+	"prefix": "zHistory",
+	"body": [
+		"== Document History",
+		"",
+		".Document History",
+		"[cols='2,2,2,6' options='header']",	
+		"|===",
+		"| Date  | Version | Author | Description",		
+		"| ${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR} | V2,1b | JHRS |  Initial version",
+		"|==="
+		" ",
+		"$0",
+	],
+	"description": "Add document history (Bottom of doc)"
+},
+
+/* --- zImage - ASCDoc snippet by GeekMustHave
+		Insert image element
+		NOTE: assume a PNG file
+*/		
+"insert Image": {
+	"prefix": "zImage",
+	"body": [
+		".${1:ImageDescription}",
+		"image::${2:ImageFile}.png[${1:ImageDescription}, align='center']",
+		" ",
+		"$0",
+	],
+	"description": "Add image"
+},
+
+
+/* --- zLink - ASCDoc snippet GeekMustHave
+		Insert linked or reference
+*/
+"insert Link": {
+	"prefix": "zLink",
+	"body": [
+		"<<${1:Reference Link}>> $0",
+	],
+	"description": "Insert reference link"
+
+},
+
+
+/* --- zNewLine - ADOC snippet GeekMustHave
+		Insert a HTML pass through for new line
+*/
+"insert New-line": {
+	"prefix": "zNewLine",
+	"body": [
+		"+++<br>+++"
+	],
+	"description": "Insert new line pass-through"
+},
+
+/* --- zPageBreak - ASCDoc snippet GeekMustHave
+		Insert a page break sequence
+*/
+"insertPageBreak": {
+	"prefix": "zPageBreak",
+	"body": [
+		"<<<<",
+		" ",
+		"$0",
+	],
+	"description": "Insert Page Break"
+
+},
+
+/* --- zSidebar - ASCDoc snippet GeekMustHave
+		Insert a sidebar, outlined panel with heading
+*/
+"insert Sidebar": {
+	"prefix": "zSidebar",
+	"body": [
+		".${1:Sidebar heading}",
+		"****",
+		"${2:Sidebar content}",
+		"****",
+		" ",
+		"$0",
+	],
+	"description": "Insert Sidebar"
+
+},
+
+/* --- zTable - ASCDoc snippets by GeekMustHave
+	    insert blank table with fixings
+*/
+"insert Table": {
+	"prefix": "zTable",
+	"body": [
+		".${1:tableName}",
+		"[cols='1,2,3' options='header']",
+		"|===",
+		"| Heading 1 | Heading 2 | Heading 3",
+		"| Value 1 | Value 2 | Value 3",
+		"|==="
+	],
+	"description": "Empty Table"
+},
+
+
+}
+
+
+/*
+SNIPPET HISTORY
+
+DATE      VERSION  AUTHOR    DESCRIPTION
+-------- --------- -------  ------------------------------------------
+06/29/18    2.1g    JHRS    Updated documentation, add version number to header
+06/07/18	2.1f	JHRS	Updated Admonition to work correctly
+06/06/18    2.1e    JHRS    Added admonitions NOTE, CAUTION
+05/23/18   	2.1d	JHRS	Added Insert code and tidied up
+03/12/18    2.1c    JHRS    Added more for tables
+01/12/18	2.1b	JHRS	Initial version of snippet library		
+*/
